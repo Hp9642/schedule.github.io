@@ -1,12 +1,266 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'poppins', sans-serif;
 }
+
 .header{
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7),url(schedule\bg.jpg));
-   background-position: center;
-   background-size: cover;
-   background-position: relative;
+  background-image: linear-gradient(
+    rgba(0,0,0,0.3),
+    transparent),
+    url(images/bg.jpg)
+  ;
+  background-size: cover;
+  position: relative;
+}
+nav{
+  display:flex;
+  padding:2% 6%;
+  justify-content:right;
+  align-items: center;
+  padding-top: 1%;
+  padding-right: 3%;
+}
+
+.nav-links{
+  flex:1;
+  text-align:right;
+}
+
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background:#a22106;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
+.back-video{
+  position:absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+}
+@media (min-aspect-ratio : 16/9){
+  .back-video{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio : 16/9){
+  .back-video{
+    width: auto;
+    height: 100%;
+  }
+}
+nav .fa{
+  display:none;
+
+}
+@media(max-width: 700px){
+  .nav-links ul li{
+       display: block;
+  }
+  .nav-links{
+    position: absolute;
+    background:#6d524c;
+    height: 100vh;
+    width: 150px;
+    top:0;
+    right:-150px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s
+  }
+  nav .fa{
+    display: block;
+    color:#ffff;
+    margin :10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul{
+    padding: 25px;
+  }
+}
+
+
+.schedule{
+  width:80%;
+  margin:auto;
+  text-align: center;
+  padding-top: 50px;
+
+}
+h1{
+  font-size: 36px;
+  font-weight: 600px;
+}
+
+.styled-table {
+  position: relative;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.styled-table thead tr {
+  background-color: black;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+  background-color: #5fa093;
+}
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid black;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: black;
+}
+
+.btn {
+
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: none;
+  padding: 0 56px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 7px;
+  background-color: #0070f3;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+  transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn:hover{
+  background: rgba(0,118,255,0.9);
+  box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+}
+.schedule{
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+    rgba(4, 9, 30, 0.7),
+    rgba(4, 9, 30, 0.7)),
+    url(images/bgs.jpg)
+  ;
+  background-size: cover;
+  position: relative;
+}
+
+.h1{
+  color: white;
+}
+.handout{
+  text-decoration: none;
+  color: black;
+}
+.hide {
+  display: none;
+}
+
+.mathhovt:hover + .hide {
+  display: block;
+  color: red;
+}
+
+.hovertext {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.text-box{
+  color: #fff;
+  position:absolute;
+  bottom:8%;
+  padding-left: 75px;
+  padding-bottom: 75px;
+}
+
+.text-box p{
+  font-size: 50px;
+  font-weight: 600;
+}
+.text-box h1{
+  font-size: 190px;
+  line-height: 160px;
+  margin-left:-10px;
+
+}
+.text-box h3{
+  font-size: 40px;
+  font-weight: 500;
 }

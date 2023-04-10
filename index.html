@@ -18,13 +18,13 @@
         </video>
         <nav>
             <div class="nav-links" id="navLinks">
-      
+                <i class="fa fa-times" oneclick="hidemenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="#schedule">SCHEDULE</a></li>
                     <li><a href="">ABOUT</a></li>
                 </ul>
-            
+                <i class="fa fa-bars" oneclick="showmenu()"></i>
             </div>
         </nav>
         <div class="text-box">
@@ -32,7 +32,7 @@
             <h1>HARSHITH</h1>
             <H3>I AM A NEW DEVELOPER</H3>
 
-        </div>>
+        </div>
     </section>
 
 
@@ -148,21 +148,6 @@
     <a href="images/tt.png" download><button class="btn">DOWNLOAD
     </button></a>
 </section>
-
-
-
- <script>
-    var navLinks= schedule.getElemntById("navLinks");
-    function showmenu(){
-        navLinks.style.right ="0";
-    }
-
-    function hidemenu(){
-        navLinks.style.right ="-150px";
-    }
-
- 
- </script>
 
 </body>
 </html>

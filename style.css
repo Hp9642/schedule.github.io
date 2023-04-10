@@ -67,17 +67,7 @@ nav .fa{
   display:none;
 
 }
-  .nav-links{
-    position: absolute;
-    background:#6d524c;
-    height: 100vh;
-    width: 150px;
-    top:0;
-    right:-150px;
-    text-align: left;
-    z-index: 2;
-    transition: 1s
-  }
+
   nav .fa{
     display: block;
     color:#ffff;
@@ -248,22 +238,20 @@ h1{
 }
 @media screen and (max-width : 600px)
 {
-  .text-box{
-    text-align: center;
-  }
+  
   .text-box p{
-    font-size: 45px;
+    font-size: 20px;
     font-weight: 600;
     margin-left:-5px;
   }
   .text-box h1{
-    font-size: 50px;
+    font-size: 40px;
     line-height: 60px;
     margin-left:-5px;
   
   }
   .text-box h3{
-    font-size: 45px;
+    font-size: 20px;
     font-weight: 500;
     margin-left:-5px;
 }
@@ -283,5 +271,12 @@ h1{
     .input[type=text], textarea {
       width:75%;
   }
-  
+ .nav-links a{
+  display: block;
+ }
+
+ .nav-links ul li a{
+  font-size: 15px;
+  display: block;
+ }
 }

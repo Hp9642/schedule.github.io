@@ -62,24 +62,22 @@ nav{
   z-index: -1;
 
 }
-@media (min-aspect-ratio : 16/9){
-  .back-video{
-    width: 100%;
-    height: auto;
-  }
-}
 
-@media (max-aspect-ratio : 16/9){
-  .back-video{
-    width: auto;
-    height: 100%;
-  }
-}
 nav .fa{
   display:none;
 
 }
-
+  .nav-links{
+    position: absolute;
+    background:#6d524c;
+    height: 100vh;
+    width: 150px;
+    top:0;
+    right:-150px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s
+  }
   nav .fa{
     display: block;
     color:#ffff;
@@ -90,8 +88,6 @@ nav .fa{
   .nav-links ul{
     padding: 25px;
   }
-}
-
 
 .schedule{
   width:80%;
@@ -249,4 +245,40 @@ h1{
 .text-box h3{
   font-size: 40px;
   font-weight: 500;
+}
+@media screen and (max-width : 600px)
+{
+  .text-box p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left:-5px;
+  }
+  .text-box h1{
+    font-size: 40px;
+    line-height: 60px;
+    margin-left:-5px;
+  
+  }
+  .text-box h3{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left:-5px;
+}
+
+  .styled-table {
+    position: relative;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: .1em;
+    font-family: sans-serif;
+    min-width: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .input[type=text], textarea {
+      width:75%;
+  }
+  
 }

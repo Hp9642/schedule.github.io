@@ -1,19 +1,41 @@
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'poppins', sans-serif;
 }
+:root .dark-mode{
+  --bg-main: #18122B;
+  --bg-primary:#FEF8DD;
+}
+body .dark-mode{
+  background-color: var(--bg-main);
+  color: var(--bg-primary);
+}
+.dark-mode text-box {
+  color: var(--bg-primary);
+  position:absolute;
+  bottom:8%;
+  padding-left: 75px;
+  padding-bottom: 75px;
+
+}
+
+:root{
+  --bg-main: #FEF8DD;
+  --bg-primary: #18122B;
+}
+body{
+  background-color: var(--bg-main);
+  color: var(--bg-primary);
+}
 
 .header{
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(
-    rgba(0,0,0,0.3),
-    transparent),
-    url(images/bg.jpg)
-  ;
   background-size: cover;
   position: relative;
+  color: var(--bg-primary); 
 }
 nav{
   display:flex;
@@ -25,8 +47,12 @@ nav{
 }
 
 .nav-links{
+  text-decoration-color: var(--bg-primary);
   flex:1;
   text-align:right;
+}
+.color{
+  text-decoration-color: var(--bg-primary);
 }
 
 .nav-links ul li{
@@ -37,7 +63,6 @@ nav{
 }
 
 .nav-links ul li a{
-  color: white;
   text-decoration: none;
   font-size: 20px;
 
@@ -214,12 +239,22 @@ h1{
   visibility: visible;
 }
 
+
 .text-box{
-  color: #fff;
+  color: var(--bg-primary);
   position:absolute;
   bottom:8%;
   padding-left: 75px;
   padding-bottom: 75px;
+}
+
+.text-box .dark-mode{
+  color: var(--bg-primary);
+  position:absolute;
+  bottom:8%;
+  padding-left: 75px;
+  padding-bottom: 75px;
+
 }
 
 .text-box p{
@@ -280,3 +315,43 @@ h1{
   display: block;
  }
 }
+ 
+input[type="checkbox"]{
+  -webkit-appearance: none;
+  position: relative;
+  width: 80px;
+  height: 40px;
+  border-radius:50px;
+  outline: none;
+  background-image:url(ligth.jpeg);
+  background-size: cover;
+  
+
+}
+input[type="checkbox"]::before{
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  height: 40px;
+  width:40px;
+  background-color:black;
+  border-radius:50px;
+
+}
+input[type="checkbox"]:checked::before{
+  transform: translate(100%);
+
+}
+input[type="checkbox"]:checked{
+  background-image:url(dark.jpeg);
+  background-size: cover;
+
+}
+
+@media (prefers-color-scheme: dark){
+  body {
+     background: #000;
+  }
+}
+

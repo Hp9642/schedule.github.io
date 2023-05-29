@@ -5,20 +5,16 @@
     <title>Schedule</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body background="images/bg.jpg">
+<body class="light-mode" id="body">
     <section class="header">
 
-        <video autoplay loop muted play-inline  class="back-video">
-            <source scr="images\banner.mp4" type="video.mp4">
-        </video>
         <nav>
             <div class="nav-links" id="navLinks">
-                <ul>
+                <ul class="color">
                     <li><a href="">HOME</a></li>
                     <li><a href="#schedule">SCHEDULE</a></li>
                     <li><a href="https://github.com/Hp9642">GITHUB</a></li>
@@ -28,8 +24,13 @@
         <div class="text-box">
             <p>I'M</p>
             <h1>HARSHITH</h1>
-            <H3>I AM A NEW DEVELOPER</H3>
-
+            <h3>I AM A NEW DEVELOPER</h3>
+            <div class="toggle-btn">
+              <label class="switch">
+                  <input type="checkbox" id="checkbox" onchange="toggleMode()">
+                  <span class="slider round"></span>
+              </label>
+            </div>
         </div>
     </section>
 
@@ -38,7 +39,8 @@
     <h1 class="h1" id="schedule">SCHEDULE</h1>
         <table class="styled-table">
         <thead>
-            <tr>
+           
+             <tr class="day">
                 <th>Time</th>
                 <th>Monday</th>
                 <th>Tuesday</th>
@@ -47,7 +49,7 @@
                 <th>Friday</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="time">
             <tr>
                 <td>8:00 AM</td>
                 <td><a href="images/m2.pdf" download class="handout"><span class="hovertext" data-hover="D WING D-LT5">
@@ -146,6 +148,6 @@
     <a href="images/tt.png" download><button class="btn">DOWNLOAD
     </button></a>
 </section>
-
+<script src="index.js"></script>
 </body>
 </html>
